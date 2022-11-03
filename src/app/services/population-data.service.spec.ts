@@ -8,24 +8,23 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { PopulationDataService } from './population-data.service';
 
 const mockResponse = {
-  "batchcomplete": "",
-  "continue": {
-    "sroffset": 10,
-    "continue": "-||"
-  },
-  "query": {
-    "searchinfo": {
-      "totalhits": 36853
+  "data": [
+    {
+      "ID State": "04000US01",
+      "State": "Alabama",
+      "ID Year": 2020,
+      "Year": "2020",
+      "Population": 4893186,
+      "Slug State": "alabama"
     },
-    "search": [{
-      "ns": 0,
-      "title": "Stuff",
-      "snippet": "<span></span>",
-      "size": 1906,
-      "wordcount": 204,
-      "timestamp": "2016-06-10T17:25:36Z"
+    {
+      "ID State": "04000US02",
+      "State": "Alaska",
+      "ID Year": 2020,
+      "Year": "2020",
+      "Population": 736990,
+      "Slug State": "alaska"
     }]
-  }
 };
 
 describe('Wikipedia search service', () => {
