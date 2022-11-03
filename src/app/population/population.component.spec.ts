@@ -1,4 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
 import { PopulationComponent } from './population.component';
 
@@ -6,18 +9,15 @@ describe('PopulationComponent', () => {
   let component: PopulationComponent;
   let fixture: ComponentFixture<PopulationComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PopulationComponent ]
-    })
-    .compileComponents();
-
+  beforeEach((() => {
+    TestBed.configureTestingModule({
+      declarations: [PopulationComponent]
+    });
     fixture = TestBed.createComponent(PopulationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  test('should exist', () => {
+    expect(component).toBeDefined();
   });
 });
